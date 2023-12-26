@@ -8,7 +8,7 @@ const { viewMyReports } = require("../../controller/user/viewMyReports")
 const upload = multer({storage : storage})
 
 
-router.route("/report").post(isAuthenticated, upload.single("image"), catchAsync(reportProblem)).get(isAuthenticated,catchAsync(viewMyReports))
+router.route("/report").post(upload.single("image"), isAuthenticated,  reportProblem).get(isAuthenticated,catchAsync(viewMyReports))
 
 
 module.exports = router

@@ -33,8 +33,8 @@ const reportsSchema = new Schema({
     },
     status:{
         type: String,
-        enum: ['solved','not solved'],
-        default: 'not solved'
+        enum: ['solved','not solved']
+        
     },
     image:{
         type: String
